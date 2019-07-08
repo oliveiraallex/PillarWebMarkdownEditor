@@ -1,0 +1,74 @@
+
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+<meta charset="UTF-8">
+<title>Markdown Editor to Pillar</title>
+<link rel="stylesheet" type="text/css" href="css/stylesheet.css" media="screen">
+
+<style>
+	.editor-preview h1,
+	.editor-preview h2,
+	.editor-preview h3,
+	.editor-preview h4,
+	.editor-preview h5{
+		margin-bottom:10px;
+	}
+	
+	.editor-preview h1{
+		border-bottom:1px solid #ddd;
+	}
+	
+	.editor-preview h1{
+		border-bottom:1px solid #eee;
+	}
+	</style>
+</head>
+<body>
+<section class="page-header">
+<h1 class="project-name">Markdown Editor to Pillar</h1>
+<h2 class="project-tagline">MDE Pillar is a simple, embeddable, and beautiful JS markdown editor</h2>
+<a href="https://github.com/oliveiraallex/markdownEditorPillar" class="btn">View on GitHub</a>
+</section>
+<section class="main-content">
+<h1><a id="h1_pillar" class="anchor" href="#h1_pillar" aria-hidden="true"><span class="octicon octicon-link"></span></a></h1>
+<textarea id="pillar"># Intro
+Go ahead, play around with the editor! Be sure to check out **bold** and *italic* styling, or even [links](https://google.com). You can type the Markdown syntax, use the toolbar, or use shortcuts like `cmd-b` or `ctrl-b`.
+
+**bold** and ==italic==
+
+!! Lists
+Unordered lists can be started using the toolbar or by typing `* `, `- `, or `+ `. Ordered lists can be started by typing `1. `.
+
+!!!! Unordered
+* Lists are a piece of cake
+* They even auto continue as you type
+* A double enter will end them
+* Tabs and shift-tabs work too
+
+!!!! Ordered
+1. Numbered lists...
+2. ...work too!
+
+!! What about images?
+Set image
++Image description.>files/pharo.png|width=90|label=imageLabel+
+Use image
+*@imageLabel*
+
+</textarea>
+<footer class="site-footer">
+<span class="site-footer-credits">MDE Pillar was based on <a href="https://github.com/sparksuite/simplemde-markdown-editor">SimpleMDE Markdown Editor</a></span>
+</footer>
+</section>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
+<link rel="stylesheet" href="css/simplemde.min.css">
+<script src="js/simplemde.js"></script>
+<script>
+	new SimpleMDE({
+		element: document.getElementById("pillar"),
+		spellChecker: false,
+	});
+	</script>
+</body>
+</html>
